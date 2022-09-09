@@ -1,0 +1,23 @@
+networks:
+  kovan:
+    weth_token: '0xd0A1E359811322d97991E03f863a0C30C2cF029C' 
+    lending_Pool_Address_Provider: "0x88757f2f99175387aB4C6a4b3067c77A695b0349"
+   
+
+
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@4.7.2
+  - aave/protocol-v2@1.0.1
+ 
+compiler:
+  solc:
+    remappings:
+      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.7.2'
+      -  '@aave=aave/protocol-v2@1.0.1'
+dotenv: .env
+wallets:
+  from_key: ${private_key}   
+
+address:
+  erc20_token: "0x9e6530BCA1F7945302a0Cbc213CBD96581D9A2b6"   
+  others: "0x443A17D0B5Cfcf6090D81D19F4387223E3DBAE5d" 
